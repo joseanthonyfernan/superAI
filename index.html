@@ -2,12 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Shutdown Demo</title>
+  <title>Shutdown Simulation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: black;
+      color: lime;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      margin: 0;
+    }
+    #screen {
+      font-size: 2rem;
+    }
+  </style>
 </head>
 <body>
-  <h1>Educational Shutdown Demo</h1>
-  <button onclick="window.location.href='shutdown.php'">
-    Shutdown My Computer
-  </button>
+  <div id="screen">Starting system...</div>
+
+  <script>
+    window.addEventListener('load', () => {
+      const screen = document.getElementById('screen');
+      setTimeout(() => {
+        screen.textContent = 'Shutting down...';
+      }, 2000); // after 2 seconds
+      setTimeout(() => {
+        screen.textContent = '';
+        document.body.style.background = 'black';
+      }, 4000); // after 4 seconds
+    });
+  </script>
 </body>
 </html>
