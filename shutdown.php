@@ -1,7 +1,7 @@
 <?php
 // shutdown.php — local-only educational use
 
-$bat = 'C:\\xampp\\htdocs\\newscripting\\logo.bat';
+$bat = 'logo.bat';
 
 // Check if batch file exists
 if (!file_exists($bat)) {
@@ -16,3 +16,4 @@ pclose(popen('cmd /c start "" "'. $bat .'"', 'r'));
 echo "Shutdown command launched automatically.";
 exit;
 ?>
+
